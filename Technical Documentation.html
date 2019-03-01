@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Technical Documentation</title>
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="StyleSheet.css" rel="stylesheet" />
+</head>
+<nav id="navbar">
+    <header id="header_navbar" class="text-primary text-center">
+        <h1>The C# programming language</h1>
+    </header>
+    <a href="#C#_-_Overview" class="nav-link btn btn-primary btn-block">C# - Overview</a>
+    <a href="#Strong_Programming_Features_of_C#" class="nav-link btn btn-primary btn-block">Strong Programming Features
+        of C#</a>
+    <a href="#Creating_Hello_World_Program" class="nav-link btn btn-primary btn-block">Creating Hello World Program</a>
+    <a href="#Basic_Syntax" class="nav-link btn btn-primary btn-block">Basic Syntax</a>
+    <a href="#The_using_Keyword" class="nav-link btn btn-primary btn-block">The using Keyword</a>
+    <a href="#The_class_Keyword" class="nav-link btn btn-primary btn-block">The class Keyword</a>
+    <a href="#Comments_in_C#" class="nav-link btn btn-primary btn-block">Comments in C#</a>
+    <a href="#Reference" class="nav-link btn btn-primary btn-block">Reference</a>
+</nav>
+<main id="main-doc">
+    <!--Section 1 ***************************************************************************************************************************-->
+    <section class="main-section" id="C#_-_Overview">
+        <header>
+            <h1>C# - Overview</h1>
+        </header>
+        <article>
+            <p>C# is a modern, general-purpose, object-oriented programming language developed by Microsoft and
+                approved by
+                European Computer Manufacturers Association (ECMA) and International Standards Organization (ISO). C#
+                was
+                developed by Anders Hejlsberg and his team during the development of .Net Framework.</p>
+            <p>C# is designed for Common Language Infrastructure (CLI), which consists of the executable code and
+                runtime
+                environment that allows use of various high-level languages on different computer platforms and
+                architectures.
+                The following reasons make C# a widely used professional language</p>
+            <ul>
+                <li>It is a modern, general-purpose programming language</li>
+                <li>It is object oriented.</li>
+                <li>It is component oriented.</li>
+                <li>It is easy to learn.</li>
+                <li>It is a structured language.</li>
+                <li>It produces efficient programs.</li>
+                <li>It can be compiled on a variety of computer platforms.</li>
+                <li>It is a part of .Net Framework.</li>
+            </ul>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 2 ***************************************************************************************************************************-->
+    <section class="main-section" id="Strong_Programming_Features_of_C#">
+        <header>
+            <h1>Strong Programming Features of C#</h1>
+        </header>
+        <article>
+            <p>Although C# constructs closely follow traditional high-level languages, C and C++ and being an
+                object-oriented
+                programming language. It has strong resemblance with Java, it has numerous strong programming features
+                that
+                make it endearing to a number of programmers worldwide. Following is the list of few important features
+                of
+                C#
+            </p>
+            <ul>
+                <li>Boolean Conditions</li>
+                <li>Automatic Garbage Collection</li>
+                <li>Standard Library</li>
+                <li>Assembly Versioning</li>
+                <li>Properties and Events</li>
+                <li>Delegates and Events Management</li>
+                <li>Easy-to-use Generics</li>
+                <li>Indexers</li>
+                <li>Conditional Compilation</li>
+                <li>Simple Multithreading</li>
+                <li>LINQ and Lambda Expressions</li>
+                <li>Integration with Windows</li>
+            </ul>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 3 ***************************************************************************************************************************-->
+    <section class="main-section" id="Creating_Hello_World_Program">
+        <header>
+            <h1>Creating Hello World Program</h1>
+        </header>
+        <article>
+            <p>A C# program consists of the following parts </p>
+            <ul>
+                <li>Namespace declaration</li>
+                <li>A class</li>
+                <li>Class methods</li>
+                <li>Class attributes</li>
+                <li>A Main method</li>
+                <li>Statements and Expressions</li>
+                <li>Comments</li>
+            </ul>
+            <p>Let us look at a simple code that prints the words "Hello World" </p>
+            <code>
+                using System;
+                    namespace HelloWorldApplication {
+                       class HelloWorld {
+                          static void Main(string[] args) {
+                             /* my first program in C# */
+                             Console.WriteLine("Hello World");
+                             Console.ReadKey();
+                          }
+                       }
+                    }
+            </code>
+            <p>When this code is compiled and executed, it produces the following result </p>
+            <code>
+                Hello World  
+            </code>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 4 ***************************************************************************************************************************-->
+    <section class="main-section" id="Basic_Syntax">
+        <header>
+            <h1>Basic Syntax</h1>
+        </header>
+        <article>
+            <p>C# is an object-oriented programming language. In Object-Oriented Programming methodology, a program
+                consists of
+                various objects that interact with each other by means of actions. The actions that an object may take
+                are
+                called methods. Objects of the same kind are said to have the same type or, are said to be in the same
+                class.</p>
+            <p>For example, let us consider a Rectangle object. It has attributes such as length and width. Depending
+                upon
+                the
+                design, it may need ways for accepting the values of these attributes, calculating the area, and
+                displaying
+                details. Let us look at implementation of a Rectangle class and discuss C# basic syntax </p>
+            <code>
+                using System;
+            
+            namespace RectangleApplication {
+               class Rectangle {
+                  
+                  // member variables
+                  double length;
+                  double width;
+                  
+                  public void Acceptdetails() {
+                     length = 4.5;    
+                     width = 3.5;
+                  }
+                  public double GetArea() {
+                     return length * width; 
+                  }
+                  public void Display() {
+                     Console.WriteLine("Length: {0}", length);
+                     Console.WriteLine("Width: {0}", width);
+                     Console.WriteLine("Area: {0}", GetArea());
+                  }
+               }
+               class ExecuteRectangle {
+                  static void Main(string[] args) {
+                     Rectangle r = new Rectangle();
+                     r.Acceptdetails();
+                     r.Display();
+                     Console.ReadLine(); 
+                  }
+               }
+            }
+            
+            </code>
+            <p>When the above code is compiled and executed, it produces the following result </p>
+            <code>
+                Length: 4.5
+                Width: 3.5
+                Area: 15.75
+            </code>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 5 ***************************************************************************************************************************-->
+    <section class="main-section" id="The_using_Keyword">
+        <header>
+            <h1>The using Keyword</h1>
+        </header>
+        <article>
+            <p>The first statement in any C# program is</p>
+            <code>
+                using System;
+            </code>
+            <p>The using keyword is used for including the namespaces in the program. A program can include multiple
+                using
+                statements.</p>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 6 ***************************************************************************************************************************-->
+    <section class="main-section" id="The_class_Keyword">
+        <header>
+            <h1>The class Keyword</h1>
+        </header>
+        <article>
+            <p>The class keyword is used for declaring a class.</p>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 7 ***************************************************************************************************************************-->
+    <section class="main-section" id="Comments_in_C#">
+        <header>
+            <h1>Comments in C#</h1>
+        </header>
+        <article>
+            <p>Comments are used for explaining code. Compilers ignore the comment entries. The multiline comments in
+                C#
+                programs start with /* and terminates with the characters */ as shown below </p>
+            <code>
+            /* This program demonstrates
+            The basic syntax of C# programming 
+            Language */
+    
+            </code>
+            <p>Single-line comments are indicated by the '//' symbol. For example,</p>
+            <code>
+            }//end class Rectangle    
+            </code>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+    <!--Section 8 ***************************************************************************************************************************-->
+    <section class="main-section" id="Reference">
+        <header>
+            <h1>Reference</h1>
+        </header>
+        <article>
+            <p>
+                All the documentation in this page is taken from <a href="https://www.tutorialspoint.com/csharp/index.htm"
+                    target="_blank">Tutorials Point</a>
+            </p>
+        </article>
+        <a href="#C#_-_Overview" class="center" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    </section>
+</main>
+
+</html>
